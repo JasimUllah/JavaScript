@@ -15,6 +15,8 @@ console.log("a ** b = ", a**b); // Exponentiation a^b
 // Uniary Operators
 // a = a + 1;
 a++;
+// ++a;
 console.log("a = ", a);
 a--;
+// --a
 console.log("a = ", a);
