@@ -45,5 +45,4 @@ if (score >=90 && score <= 100) {
 } else if (score >= 0 && score <= 49) {
     grade = "F";
 } 
-
 console.log("Your grade is:", grade);
