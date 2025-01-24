@@ -1,6 +1,6 @@
 // Strings
 
-let str = "Jasim Ullah";
+let str = "Hello World!";
 console.log(str);
 
 // Printing total number of characters
@@ -32,3 +32,25 @@ console.log(output);
 
 console.log("Hello\nWorld!");
 console.log("Hello\tWorld!");
+
+// ============================================================================
+
+// String Methods
+
+//  There are many string methods but few are the following
+
+console.log(str.toUpperCase());     // Make all character Upper Cased
+
+console.log(str.toLowerCase());     // Make all character Lower Cased
+
+let str2 = "This is JavaScript Practice";
+console.log(str2.trim());
+
+console.log(str.slice(2, 8));
+
+console.log(str.concat(str2));
+console.log(str + str2);
+
+console.log(str2.replace("JavaScript", "Python"));
+
+console.log(str2.charAt(8));    // Character at index i
