@@ -1,2 +1,2 @@
-console.log("Hello!");
-alert("Hi!");
+// console.dir(document.body);
+// console.log(document.body);
