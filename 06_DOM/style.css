@@ -1,12 +1,22 @@
 body {
-    background-color: azure;
+  background-color: azure;
 }
 
-h3 {
+/* h3 {
+  color: blue;
+} */
+
+#heading {
+  /* Accessing by id */
   color: blue;
 }
 
+.heading-class {
+    /* Accessing by class */
+    color: brown;
+}
+
 button {
-    color: white;
-    background-color: blue;
+  color: white;
+  background-color: blue;
 }
