@@ -15,5 +15,14 @@
 // console.dir(childrens);
 
 // This will return the 4th child of the body tag
-let child = document.body.children[4];
-console.dir(child);
+// let child = document.body.children[4];
+// console.dir(child);
+
+// let div = document.querySelector("div");
+// console.dir(div.innerText);
+
+// let div = document.querySelector("div");
+// console.dir(div.innerHTML);
+
+let div = document.querySelector("div");
+console.dir(div.textContent);
