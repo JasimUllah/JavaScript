@@ -50,5 +50,9 @@ console.log(newBtn);
 // div.before(newBtn);
 
 // insert button after div
+// let div = document.querySelector("div");
+// div.after(newBtn);
+
+// remove button before div
 let div = document.querySelector("div");
-div.after(newBtn);
+div.remove(newBtn);
