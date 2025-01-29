@@ -20,3 +20,12 @@ button {
   color: white;
   background-color: blue;
 }
+
+
+.myClass {
+  color: yellow;
+}
+
+.newClass {
+  background-color: green;
+}
