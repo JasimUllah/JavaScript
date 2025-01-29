@@ -22,12 +22,33 @@
 
 // Part 2 DOM Manipulation
 // Accessing attrbutes of tags
-let div = document.querySelector("div");
-console.dir(div);
+// let div = document.querySelector("div");
+// console.dir(div);
 
-let id = div.getAttribute("id");
-console.log(id);
+// let id = div.getAttribute("id");
+// console.log(id);
 
 // setting attributes
-let para = document.querySelector("p");
-console.log(para.setAttribute("class", "myClass"));
+// let para = document.querySelector("p");
+// console.log(para.setAttribute("class", "myClass"));
+
+// first create a button
+let newBtn = document.createElement("button");
+newBtn.innerText = "Click Here";
+console.log(newBtn);
+
+// insert button after div
+// let div = document.querySelector("div");
+// div.append(newBtn);
+
+// insert button before div
+// let div = document.querySelector("div");
+// div.prepend(newBtn);
+
+// insert button before div
+// let div = document.querySelector("div");
+// div.before(newBtn);
+
+// insert button after div
+let div = document.querySelector("div");
+div.after(newBtn);
