@@ -7,14 +7,34 @@ let btn1 = document.querySelector("#btn1");
 //     console.log(a);
 // }
 
+// let box = document.querySelector(".box");
+// box.onmouseover = () => {
+//     console.log("You are hovering over box");
+// };
+
 // Event Object
-btn1.onclick = (evnt) => {
-    console.log(evnt);
-    console.log(evnt.type);
-    console.log(evnt.target);
+// btn1.onclick = (evnt) => {
+//     console.log(evnt);
+//     console.log(evnt.type);
+//     console.log(evnt.target);
+// };
+
+// Adding Event listners
+btn1.addEventListener("click", () => {
+    console.log("btn1 was clicked - handler 1");
+});
+
+btn1.addEventListener("click", () => {
+    console.log("btn1 was clicked - handler 2");
+});
+
+const handler3 = () => {
+    console.log("btn1 was clicked - handler 3");
 };
 
-let box = document.querySelector(".box");
-box.onmouseover = () => {
-    console.log("You are hovering over box");
-};
+btn1.addEventListener("click", () => {
+    console.log("btn1 was clicked - handler 4");
+});
+
+// Removing event listner
+btn1.removeEventListener("click", handler3);
