@@ -3,10 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
     <title>Document</title>
 </head>
 <body>
+    <!-- Inline event handling -->
     <button onclick="console.log('Button was clicked')">Click Me</button>
+    
+    <button ondblclick="console.log('Button was clicked 2 times')">Click Me 2x</button>
+
+    <div class="box" onmouseover="console.log('You are hovering over box')">This is a box</div>
+
     <script src="Events.js"></script>
 </body>
 </html>
