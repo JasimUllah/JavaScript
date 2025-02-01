@@ -6,7 +6,7 @@ let msg = document.querySelector("#msg");
 
 let turnO = true; // playerX, playerO
 
-// 2D Array
+// 2D Array for the winning patterns
 const winPatterns = [
   [0, 1, 2],
   [0, 3, 6],
@@ -18,9 +18,15 @@ const winPatterns = [
   [6, 7, 8],
 ];
 
+const resetGame = () => {
+    turnO = true;
+    enableBoxes();
+    msgContainer.classList.add("hide");
+}
+
+// Checks which box is clicked and mark it as X and O
 boxes.forEach((box) => {
   box.addEventListener("click", () => {
-    console.log("box was clicked");
     if (turnO) {
       // playerO turn
       box.innerText = "O";
@@ -35,11 +41,29 @@ boxes.forEach((box) => {
   });
 });
 
+// Function for getting a winner disable all the buttons or boxes
+const disableBoxes = () => {
+    for (let box of boxes) {
+        box.disabled = true;
+    }
+}
+
+const enableBoxes = () => {
+    for (let box of boxes) {
+        box.disabled = false;
+        box.innerText = "";
+    }
+}
+
+
+// Function for showing the winner
 const showWinner = (winner) => {
   msg.innerText = `Congratulations, Winner is ${winner}`;
   msgContainer.classList.remove("hide");
+  disableBoxes();
 };
 
+// Function to check the winner
 const checkWinner = () => {
   for (let pattern of winPatterns) {
     let pos1Val = boxes[pattern[0]].innerText;
@@ -48,9 +72,11 @@ const checkWinner = () => {
 
     if (pos1Val != "" && pos2Val != "" && pos3Val != "") {
       if (pos1Val === pos2Val && pos2Val === pos3Val) {
-        console.log("winner is", pos1Val);
         showWinner(pos1Val);
       }
     }
   }
 };
+
+newGameBtn.addEventListener("click", resetGame);
+resetBtn.addEventListener("click", resetGame);
