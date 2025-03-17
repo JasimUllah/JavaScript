@@ -1,4 +1,9 @@
 class Car {
+  constructor(brand) {
+    console.log("creating new object");
+    this.brand = brand;
+  }
+
   start() {
     console.log("start the car");
   }
@@ -7,10 +12,11 @@ class Car {
     console.log("stop the car");
   }
 
-  setBrand(brand) {
-    this.brand = brand;
-  }
+  //   setBrand(brand) {
+  //     this.brand = brand;
+  //   }
 }
 
-let fortuner = new Car();   // object of class Car
-fortuner.setBrand("Fortuner");
+let fortuner = new Car(); // object of class Car
+// fortuner.setBrand("Fortuner");
+let lexus = new Car();
