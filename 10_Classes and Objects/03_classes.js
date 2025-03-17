@@ -12,5 +12,5 @@ class Car {
   }
 }
 
-let fortuner = new Car();
+let fortuner = new Car();   // object of class Car
 fortuner.setBrand("Fortuner");
