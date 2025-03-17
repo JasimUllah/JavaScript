@@ -3,18 +3,33 @@
 // name and email. It also has a method claled viewData() that allow user to view
 // webste data
 
-let myData = "Information"
+let Data = "Information";
 
 class User {
-    constructor(name, email) {
-        this.name = name
-        this.email = email
-    }
+  constructor(name, email) {
+    this.name = name;
+    this.email = email;
+  }
 
-    viewData() {
-        console.log("data = ", myData)
-    }
+  viewData() {
+    console.log("data = ", myData);
+  }
 }
 
-let std1 = new User("Jasim", "jasim@email.com")
-let std2 = new User("test", "test@email.com")
+// Question 02
+// Create a new class called Admin which inherits from User. Add a new method called
+// editData to Admin that allows it to edit website data
+
+class Admin extends User {
+  constructor(name, email) {
+    super(name, email);
+  }
+  editData() {
+    Data = "Some new data";
+  }
+}
+
+let std1 = new User("Jasim", "jasim@email.com");
+let std2 = new User("test", "test@email.com");
+
+let admin = new Admin("admin", "admin@gmail.com");
